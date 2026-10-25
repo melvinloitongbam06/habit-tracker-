@@ -1,0 +1,24 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ꯍꯦꯕꯤꯠ ꯇ꯭ꯔꯦꯀꯔ</title>
+<link rel="icon" type="image/svg+xml" href="{% static 'tracker/favicon.svg' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'tracker/css/styles.css' %}?v=xp-system-1">
+</head>
+<body data-api="{% url 'tracker:api-root' %}">
+<div id="app"><main id="v"></main><nav id="nav" aria-label="Main"></nav></div>
+<div id="rem" role="region" aria-label="Reminders"></div>
+<div class="sh" id="sh"><div id="shc" role="dialog" aria-modal="true" aria-labelledby="sht"></div></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="imp" accept="application/json,.json" class="sr" tabindex="-1" aria-hidden="true">
+<noscript><p style="padding:24px;font-family:system-ui,sans-serif">Habit Tracker needs JavaScript to run.</p></noscript>
+<script src="{% static 'tracker/js/api.js' %}"></script>
+<script src="{% static 'tracker/js/app.js' %}?v=xp-system-1"></script>
+<script src="{% static 'tracker/js/coach.js' %}?v=sprig-tips-2"></script>
+<script src="{% static 'tracker/js/main.js' %}"></script>
+</body>
+</html>
